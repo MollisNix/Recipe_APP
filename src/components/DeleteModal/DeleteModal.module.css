@@ -1,0 +1,236 @@
+.noScroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  gap: 10px;
+}
+
+.contentContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 80px 8px;
+  width: 400px;
+  height: 600px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.contentContainer p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.modalHeading {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #44454F;
+}
+
+.actionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modalNotification{
+  font-size: 24px;
+  color: #AFB1C0;
+}
+
+.cancelButton {
+  box-sizing: border-box;
+  width: 380px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #AFB1C0;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cancelButton:active {
+  color: #999BA8;
+  background-color: rgba(68, 69, 79, 0.25);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.closeIconColor {
+  fill: #AFB1C0;
+}
+
+.closeButton {
+  position: absolute;
+  right: 4px;
+  top: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.closeButton:active  {
+  background-color: rgba(68, 69, 79, 0.05);
+  border-radius: 10px;
+}
+
+.closeIconContainer {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 60px;
+  height: 60px;
+}
+
+
+.confirmButton {
+  box-sizing: border-box;
+  width: 380px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #EBC060;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+}
+
+.confirmButton:active {
+  background-color: #FFB000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .contentContainer {
+  width: 500px;
+  height: 600px;
+}
+
+.confirmButton:hover {
+  background-color: #FFB000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cancelButton:hover {
+  color: #999BA8;
+  background-color: rgba(68, 69, 79, 0.25);
+  transition: background-color 0.3s ease-in-out;
+}
+}
+
+@media screen and (width: 1024px) {
+  .contentContainer {
+  width: 800px;
+  height: 600px;
+
+}
+
+.actionContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.contentContainer p {
+  font-size: 34px;
+}
+
+.cancelButton {
+  width: 380px;
+}
+
+.confirmButton {
+  width: 280px;
+}
+
+.closeButton {
+  position: absolute;
+  right: 20px;
+}
+}
+
+
+@media screen and (min-width: 1440px) {
+
+.modalContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.contentContainer {
+  justify-content: center;
+  padding: 48px 0px;
+  width: 644px;
+  height: 302px;
+}
+
+.modalHeading {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #44454F;
+}
+
+.actionContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.modalNotification{
+  font-size: 24px;
+  color: #AFB1C0;
+}
+
+.cancelButton {
+  box-sizing: border-box;
+  width: 152px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #AFB1C0;
+}
+
+.closeIconColor {
+  fill: #AFB1C0;
+}
+
+.closeButton {
+  position: absolute;
+  right: 24px;
+}
+
+.closeIconContainer {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 60px;
+  height: 60px;
+}
+
+
+.confirmButton {
+  width: 207px;
+  background-color: #EBC060;
+  color: white;
+}
+}

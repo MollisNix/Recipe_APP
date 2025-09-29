@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 100vh;
+}
+
+.container span {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 786px) {
+  .container span {
+  font-size: 28px;
+}
+
+.container a {
+  font-size: 28px;
+  text-decoration: none;
+}
+}

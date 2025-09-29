@@ -1,0 +1,196 @@
+.alert {
+  font-size: 18px;
+  margin-top: 5px;
+  color: red;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  height: 100%;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 20px;
+}
+
+.fieldItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: fit-content;
+}
+
+label {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #AFB1C0;
+}
+
+input {
+  box-sizing: border-box;
+  width: 404px;
+  height: 50px;
+  padding: 18px;
+  border: 2px solid rgba(175, 177, 192, 0.25);
+  border-radius: 7px;
+  color: #44454F;
+  font-size: 18px;
+}
+
+input:active,
+input:focus,
+textarea:focus,
+textarea:active {
+  border: 2px solid #AFB1C0;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(175, 177, 192, 0.25);
+}
+
+textarea {
+  height: 80px;
+  width: 404px;
+  resize: none;
+  padding: 18px;
+  border: 2px solid rgba(175, 177, 192, 0.25);
+  border-radius: 7px;
+  font-size: 18px;
+  scrollbar-width: none;
+}
+
+textarea::placeholder {
+  color: rgba(175, 177, 192, 0.25);
+  text-align: left;
+  padding: 8px;
+}
+
+option:hover {
+  background-color: rgba(255, 176, 0, 0.25)
+}
+
+.cookingTime>input {
+  display: inline-block;
+  width: 340px;
+}
+
+.cookingTime::after {
+  position: absolute;
+  top: 70%;
+  right: -75px;
+  transform: translateY(-50%);
+  display: block;
+  content: "min";
+  margin-left: 15px;
+  color: rgba(175, 177, 192, 0.25);
+  font-size: 18px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .cookingTime>input {
+    width: 320px;
+  }
+
+  .cookingTime::after {
+    top: 75%;
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  input {
+    width: 600px;
+    height: 70px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .cookingTime>input {
+    width: 550px;
+  }
+
+  .cookingTime::after {
+    font-size: 26px;
+  }
+
+  textarea {
+    height: 150px;
+    width: 600px;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  label {
+    font-weight: 400;
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .formField {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .fieldItem {
+    position: static;
+    justify-content: center;
+  }
+
+  label {
+    width: fit-content;
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  input {
+    width: 500px;
+    height: 77px;
+    padding: 18px;
+    font-weight: 400;
+  }
+
+  input:hover,
+  input:focus,
+  textarea:focus,
+  textarea:hover {
+    border: 2px solid #AFB1C0;
+    outline: none;
+  }
+
+  textarea {
+    height: 135px;
+    width: 832px;
+    font-weight: 400;
+  }
+
+  option:hover {
+    background-color: rgba(255, 176, 0, 0.25)
+  }
+
+  .cookingTime>input {
+    display: inline-block;
+    width: 219px;
+
+  }
+
+  .cookingTime::after {
+    right: 10%;
+    top: 26%;
+    content: "min";
+    display: inline-block;
+    margin-left: 15px;
+    color: rgba(175, 177, 192, 0.25);
+    font-size: 28px;
+  }
+}

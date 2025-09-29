@@ -1,0 +1,369 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 800;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 1);
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.cardContainer::-webkit-scrollbar {
+  display: none;
+}
+
+
+.contentContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 36px;
+}
+
+.imageContainer>img {
+  width: 480px;
+  height: 336px;
+}
+
+.descriptionContainer>h2 {
+  display: flex;
+  justify-content: space-between;
+  color: #44454F
+}
+
+.cookingTime {
+  text-transform: lowercase;
+}
+
+.descriptionContainer>p {
+  color: #AFB1C0;
+  font-size: 24px;
+}
+
+.ingredientsContainer>h3 {
+  margin-top: 48px;
+  text-transform: uppercase;
+  color: #44454F
+}
+
+.ingredientsContainer>ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.ingredientsContainer li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.ingredientsContainer li>span {
+  color: #AFB1C0;
+  font-size: 24px;
+}
+
+.ingredientsContainer ul li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #FFCE60;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+}
+
+.actionContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+
+.mutationButtonsContainer {
+  display: flex;
+  gap: 24px;
+}
+
+/* add to favorite button styles  */
+
+.backGroundNormal {
+  fill: rgba(68, 69, 79, 0.09)
+}
+
+
+.iconColorNormal {
+  fill: #AFB1C0;
+}
+
+/* close button stules */
+.closeButton {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.closeButton:active {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.closeIconContainer {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 60px;
+  height: 60px;
+
+}
+
+.closeIconColor {
+  fill: #FFFF;
+}
+
+/* change button styles */
+
+
+.changeIconTop,
+.changeIconBottom {
+  fill: #AFB1C0;
+}
+
+.changeIconBackGround {
+  fill: rgba(68, 69, 79, 0.1)
+}
+
+
+.changeButtonContainer {
+  padding: 0;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.changeButtonContainer:active .changeIconTop,
+.changeButtonContainer:active .changeIconBottom {
+  fill: #40DF93;
+  transition: fill 0.3 ease;
+}
+
+.changeButtonContainer:active .changeIconBackGround {
+  fill: rgba(64, 223, 147, 0.9);
+  transition: fill 0.3 ease;
+}
+
+/* Remove button styles */
+
+.removeIconBackGround {
+  fill: rgba(68, 69, 79, 0.1)
+}
+
+.removeIconTop,
+.removeIconBottom {
+  fill: #AFB1C0;
+}
+
+.removeButtonContainer {
+  padding: 0;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.removeButtonContainer:active .removeIconTop,
+.removeButtonContainer:active .removeIconBottom {
+  fill: #FF0000;
+  transition: fill 0.3 ease;
+}
+
+.removeButtonContainer:active .removeIconBackGround {
+  fill: rgba(255, 0, 0, 0.9);
+  transition: fill 0.3 ease;
+}
+
+
+.noScroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .cardContainer {
+    width: 500px;
+  }
+
+  .imageContainer>img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .descriptionContainer>h2 {
+    flex-wrap: wrap;
+    font-size: 36px;
+    font-weight: 400;
+  }
+
+  .ingredientsContainer>h3 {
+    font-weight: 400;
+    font-size: 30px;
+    color: #44454F
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+
+  .cardContainer {
+    width: 600px;
+    background-color: #FFFF;
+  }
+
+  .imageContainer>img {
+    width: 600px;
+  }
+
+  .descriptionContainer>p {
+    color: #AFB1C0;
+  }
+
+  .ingredientsContainer>ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .ingredientsContainer li {
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .ingredientsContainer li>span {
+    color: #AFB1C0;
+  }
+
+  .ingredientsContainer ul li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #FFCE60;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+  }
+
+  .actionContainer {
+    margin-top: 25px;
+  }
+
+
+  .mutationButtonsContainer {
+    display: flex;
+    gap: 24px;
+  }
+
+  .closeIconContainer {
+    box-sizing: border-box;
+    padding: 16px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .changeButtonContainer {
+    padding: 0;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .changeButtonContainer:active .changeIconTop,
+  .changeButtonContainer:active .changeIconBottom {
+    fill: #40DF93;
+    transition: fill 0.3 ease;
+  }
+
+  .changeButtonContainer:active .changeIconBackGround {
+    fill: rgba(64, 223, 147, 0.2);
+    transition: fill 0.3 ease;
+  }
+
+
+  .removeIconTop,
+  .removeIconBottom {
+    fill: #AFB1C0;
+  }
+
+  .removeButtonContainer {
+    padding: 0;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .removeButtonContainer:active .removeIconTop,
+  .removeButtonContainer:active .removeIconBottom {
+    fill: #FF0000;
+    transition: fill 0.3 ease;
+  }
+
+  .removeButtonContainer:active .removeIconBackGround {
+    fill: rgba(255, 0, 0, 0.2);
+    transition: fill 0.3 ease;
+  }
+}

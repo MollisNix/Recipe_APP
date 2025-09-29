@@ -1,0 +1,43 @@
+import type { FC } from 'react'
+import type { ChangeButtonInterface } from '../../../types/ButtonTypes'
+
+import styles from './ChangeButton.module.css'
+
+export const ChangeButton: FC<ChangeButtonInterface> = ({ onClick, outerStyles = styles, ...props }) => {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={outerStyles.changeButtonContainer}
+      aria-label="Change recipe button"
+      {...props}
+    >
+      <svg
+        width="60"
+        height="60"
+        viewBox="0 0 60 60"
+        fill="none"
+        role="img"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="60" height="60" rx="10" className={outerStyles.changeIconBackGround} />
+        <g clipPath="url(#clip0_40_144)">
+          <path
+            d="M40.1875 27.8875L40.1687 27.8688L32.1062 19.8C32.1062 19.8 22.2812 29.625 17.5437 34.4625C16.9562 35.0625 16.5062 35.9 16.2437 36.7125C15.4687 39.0875 14.825 41.5126 14.1062 43.9063C13.9125 44.55 13.95 45.1188 14.4562 45.5938C14.9312 46.0438 15.4687 46.0688 16.0812 45.8813C18.3687 45.1938 20.6687 44.5438 22.9625 43.8876C24.1687 43.5438 25.1812 42.9063 26.0687 42.0126C30.5812 37.4876 40.1875 27.8875 40.1875 27.8875Z"
+            className={outerStyles.changeIconTop}
+          />
+          <path
+            d="M44.8937 17.8625L42.1375 15.1063C40.6625 13.6313 38.2812 13.6313 36.8062 15.1063L33.6812 18.2312L41.7687 26.3188L44.8937 23.1938C46.3687 21.725 46.3687 19.3375 44.8937 17.8625Z"
+            className={outerStyles.changeIconBottom}
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_40_144">
+            <rect width="32" height="32" fill="white" transform="translate(14 14)" />
+          </clipPath>
+        </defs>
+      </svg>
+    </button>
+  )
+}

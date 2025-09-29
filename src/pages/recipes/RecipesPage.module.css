@@ -1,0 +1,105 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-family: 'montserat-regular', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  border-bottom: 1px solid #FFCE60;
+}
+
+.header h1 {
+  color: #EBC060;
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'montserat-bold', sans-serif;
+}
+
+.addRecipeButton {
+  width: 290px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #FFCE60;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.addRecipeButton:active {
+  background-color: #FFB000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 1024px) {
+  .addRecipeButton {
+    width: 400px;
+    height: 60px;
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 0px;
+    width: 1280px;
+    padding: 0px 50px 50px 50px;
+    background-color: #FFFFFF;
+    
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1280px;
+    padding-bottom: 0px;
+    border: none
+  }
+
+  .header h1 {
+    color: #EBC060;
+    font-size: 48px;
+  }
+
+  .addRecipeButton {
+    padding: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .addRecipeButton:hover {
+    background-color: #FFB000;
+    transition: background-color 0.3s ease-in-out;
+  }
+}

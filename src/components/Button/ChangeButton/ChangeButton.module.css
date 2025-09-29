@@ -1,0 +1,35 @@
+.changeIconBackGround {
+  opacity: 20%;
+  fill: #44454F;
+}
+
+.changeIconTop {
+  fill: #ffff;
+}
+
+.changeIconBottom {
+  fill: #ffff;
+}
+
+.changeButtonContainer {
+  padding: 0;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.changeButtonContainer:active .changeIconTop, .changeButtonContainer:active  .changeIconBottom {
+  fill: #40DF93;
+  transition: fill 0.3 ease; 
+}
+
+.changeButtonContainer:active .changeIconBackGround {
+  fill: rgba(64, 223, 147, 0.9);
+  transition: fill 0.3 ease; 
+}

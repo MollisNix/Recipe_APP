@@ -1,0 +1,181 @@
+.noScroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.alert {
+  display: block;
+  font-size: 18px;
+  margin-top: 5px;
+  color: red;
+}
+
+.errorsContainer {
+  display: flex;
+
+}
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  height: 641px;
+  width: 480px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.formContainer {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 480px;
+  max-height: 641px;
+  padding: 48px 72px;
+  overflow-y: auto;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.formContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.fromTitle {
+  color: #44454F;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.submiteButton {
+  align-self: center;
+  box-sizing: border-box;
+  width: 276px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #FFCE60;
+  color: #FFFF;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.submiteButton:active {
+  background-color: #FFB000;
+  transition: fill 0.3s ease-in-out;
+}
+
+.closeIconColor {
+  fill: #AFB1C0;
+}
+
+.closeButton {
+  position: absolute;
+  right: 10px;
+  top: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.closeButton:active {
+  background-color: rgba(68, 69, 79, 0.05);
+  border-radius: 10px;
+}
+
+.closeIconContainer {
+  box-sizing: border-box;
+  padding: 16px;
+  width: 60px;
+  height: 60px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .formContainer {
+    width: 100%;
+  }
+
+  .fromTitle {
+    color: #44454F;
+    font-size: 26px;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .fromTitle {
+    font-size: 36px;
+  }
+
+  .wrapper {
+    width: 800px;
+  }
+
+  .formContainer {
+    width: 100%;
+  }
+
+  .submiteButton {
+    font-size: 24px;
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .modalContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .wrapper {
+    height: 841px;
+    width: 976px;
+  }
+
+  .formContainer {
+    width: 976px;
+    max-height: 841px;
+  }
+
+  .submiteButton {
+    width: fit-content;
+    padding: 16px 24px;
+  }
+
+  .submiteButton:hover {
+    background-color: #FFB000;
+    transition: fill 0.3s ease-in-out;
+  }
+
+}

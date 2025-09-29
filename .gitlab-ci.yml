@@ -1,0 +1,33 @@
+image: node:22
+
+stages:
+  # - prepare
+  - build
+  - check
+
+build:
+  stage: build
+  rules:
+    - when: always
+  script:
+    - npm install
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    expire_in: 1 days
+    when: on_success
+    paths:
+      - node_modules/
+
+lint:
+  stage: check
+  dependencies:
+    - build
+  needs: ['build']
+  rules:
+    - if: $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME == "task-update"
+      when: never
+    - when: on_success
+  script:
+    - npm run lint

@@ -1,0 +1,425 @@
+button {
+  background-color: transparent; 
+}
+
+.alert {
+  font-size: 18px;
+  margin-top: 5px;
+  color: red;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #FFCE60;
+}
+
+.formField:last-child {
+  justify-self: flex-end;
+}
+
+.fieldItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ingredientsList {
+  position: relative;
+  box-sizing: border-box;
+  width: 404px;
+  height: 55px;
+  padding: 8px;
+  padding-left: 18px;
+  text-align: left;
+  border: 2px solid rgba(175, 177, 192, 0.25);
+  border-radius: 7px;
+  font-size: 18px;
+}
+
+.ingredientsList::after {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 12px;
+  background-image: url('../../assets/icons/selectIcon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.qtyInputs {
+  display: flex;
+  gap: 1px;
+}
+
+.qty {
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  width: 404px;
+}
+
+.amountType {
+  box-sizing: border-box;
+  height: 50px;
+  width: 404px;
+  padding: 8px;
+  border: 2px solid rgba(175, 177, 192, 0.25);
+  border-radius: 7px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.amountTypeDropDouwn {
+  box-sizing: border-box;
+  width: 404px;
+  border: 1px solid rgba(175, 177, 192, 0.5);
+  border-radius: 10px;
+  background-color: white;
+  font-size: 18px;
+  z-index: 1010;
+} 
+
+.amountType::after {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  background-image: url('../../assets/icons/selectIcon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.removeButtonContainer {
+  align-self: flex-start;
+  padding: 0;
+  margin: 0;
+  width: 404px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background-color: #44454F;
+  color: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.removeIconBackGround {
+  fill: #44454F;
+  opacity: 20%;
+}
+
+.removeIconTop {
+  fill: #ffff;
+}
+
+.removeIconBottom {
+  fill: #ffff;
+}
+
+.removeButtonContainer:active .removeIconTop,
+.removeButtonContainer:active .removeIconBottom {
+  fill: #FF0000;
+  transition: fill 0.3 ease;
+}
+
+.removeButtonContainer:active .removeIconBackGround {
+  fill: rgba(255, 0, 0, 0.2);
+  transition: fill 0.3 ease;
+}
+
+.addIngredientsButton {
+  align-self: center;
+  margin-top: 20px;
+  border: none;
+  font-size: 18px;
+  color: #EBC060;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.addIngredientsButton:active {
+  color: #FFB000;
+}
+
+.selectLabel {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #AFB1C0;
+}
+
+.dropDouwnContainer {
+  box-sizing: border-box;
+  width: 404px;
+  border: 1px solid rgba(175, 177, 192, 0.5);
+  border-radius: 10px;
+  background-color: white;
+  font-size: 18px;
+  z-index: 1010;
+}
+
+.selectViewPort {
+  max-height: 250px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.option {
+  padding: 8px;
+  padding-left: 18px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+}
+
+.option:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.option:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.option:active {
+  background-color: rgba(255, 206, 96, 0.25);
+  border: none;
+}
+
+.option[data-state="checked"] {
+  position: relative;
+  color: white;
+  background-color: #FFB000;
+}
+
+.option[data-state="checked"]:after {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 12px;
+  background-image: url('../../../assets/icons/optionActiveIcon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .ingredientsList {
+  width: 600px;
+  height: 70px;
+  font-size: 24px;
+}
+.qty , .amountType{
+  width: 600px;
+  height: 70px;
+  font-size: 26px;
+}
+
+.dropDouwnContainer, .amountTypeDropDouwn {
+  width: 600px;
+  font-size: 26px;
+}
+
+.removeButtonContainer {
+  width: 600px;
+  height: 60px;
+
+}
+
+.addIngredientsButton {
+  font-size: 26px;
+}
+
+.selectLabel {
+  font-size: 26px;
+}
+
+.option {
+  font-size: 24px;
+}
+
+}
+
+@media screen and (min-width: 1440px) {
+  .formField {
+  flex-direction: row;
+  align-items: end;
+  gap: 20px;
+  padding: 0;
+  border: none;
+}
+
+
+.ingredientsList {
+  width: 500px;
+  height: 77px;
+}
+
+.qtyInputs {
+  display: flex;
+  align-items: end;
+  height: 77px;
+  gap: 1px;
+}
+
+.qty {
+  width: 90px;
+  height: 77px;
+}
+
+.amountType {
+  justify-content: flex-start;
+  width: 116px;
+  height: 77px;
+  text-align: start;
+  padding-left: 16px;
+}
+.amountType::after {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  content: '';
+  display: block;
+  width: 20px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.amountTypeDropDouwn {
+  width: 116px;
+} 
+
+.removeButtonContainer {
+  align-self: end;
+  width: 60px;
+  height: 80px;
+  background-color: transparent;
+}
+
+.removeIconTop {
+  fill: #AFB1C0;
+}
+
+.removeIconBottom {
+  fill: #AFB1C0;
+}
+
+.removeButtonContainer:active .removeIconTop, .removeButtonContainer:active .removeIconBottom {
+  fill: #FF0000;
+  transition: fill 0.3 ease;
+}
+
+.removeButtonContainer:active .removeIconBackGround {
+  fill: rgba(255, 0, 0, 0.2);
+  transition: fill 0.3 ease; 
+}
+
+.addIngredientsButton {
+  align-self: center;
+  margin-top: 20px;
+  border: none;
+  font-size: 24px;
+  color: #EBC060;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.addIngredientsButton:hover {
+  color: #FFB000;
+
+}
+
+.selectLabel {
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 24px;
+  color: #AFB1C0;
+  
+}
+
+button {
+  background-color: transparent;
+  
+}
+
+
+.dropDouwnContainer {
+  box-sizing: border-box;
+  width: 500px;
+  border: 1px solid rgba(175, 177, 192, 0.5);
+  border-radius: 10px;
+  background-color: white;
+  font-size: 24px;
+  z-index: 1010;
+}
+
+.selectViewPort {
+  max-height: 250px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.option {
+  padding: 8px;
+  padding-left: 18px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.option:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.option:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.option:hover {
+  background-color: rgba(255, 206, 96, 0.25);
+  border: none;
+}
+
+.option[data-state="checked"] {
+  position: relative;
+  color: white;
+  background-color: #FFB000;
+}
+
+
+.option[data-state="checked"]:after {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 12px;
+  background-image: url('../../assets/icons/optionActiveIcon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+} 
+}

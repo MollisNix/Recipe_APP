@@ -1,0 +1,35 @@
+.removeIconBackGround {
+  opacity: 20%;
+  fill: #44454F;
+}
+
+.removeIconTop {
+  fill: #ffff;
+}
+
+.removeIconBottom {
+  fill: #ffff;
+}
+
+.removeButtonContainer {
+  padding: 0;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.removeButtonContainer:active .removeIconTop, .removeButtonContainer:active .removeIconBottom {
+  fill: #FF0000;
+  transition: fill 0.3 ease;
+}
+
+.removeButtonContainer:active .removeIconBackGround {
+  fill: rgba(255, 0, 0, 0.9);
+  transition: fill 0.3 ease; 
+}

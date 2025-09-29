@@ -1,0 +1,43 @@
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .itemList {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  justify-content: center;
+  align-content: center;
+  padding-left: 8px;
+  gap: 36px;
+  list-style: none;
+}
+}
+
+@media screen and (width: 1024px) {
+  .itemList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: calc(3 * 300px + 2 * 36px);
+  justify-content: center;
+  align-content: start;
+  margin: 0 auto;
+  padding-left: 8px;
+  gap: 20px;
+  list-style: none;
+}
+}
+
+@media screen and (min-width: 1440px) {
+  .itemList {
+  display: grid;
+  grid-template-columns: repeat(3, 420px);
+  justify-content: center;
+  padding-left: 0;
+  gap: 36px;
+  list-style: none;
+} 
+}

@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h2 {
+  margin-bottom: 24px;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #44454F;
+}
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+}
+
+.messageContainer > .message {
+  text-wrap: balance;
+  text-align: center;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 48px;
+  }
+}

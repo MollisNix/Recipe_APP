@@ -1,0 +1,22 @@
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 48px;
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+  background-color: #FFEECA;
+}
+
+
+@media screen and (min-width: 1440px) {
+  .mainPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 0;
+}
+}

@@ -1,0 +1,157 @@
+.listItem {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px;
+  width: 400px;
+  padding: 20px;
+  /* background-image: url('../../../assets/img/cardDefaultImg.png'); */
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #44454F;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.textContainer h3 {
+  margin-bottom: 0;
+  font-size: 28px;
+  font-weight: normal;
+  /* color: #44454F; */
+  color: #FFFFFF;
+}
+
+.textContainer p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  text-wrap: balance;
+  font-size: 24px;
+  color: #D2D2D2;
+}
+
+.actionContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+.imgStyles {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* tablets */
+@media screen and (min-width: 768px) {
+  .listItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    width: 300px;
+    padding: 20px;
+    background-image: url('../../../assets/img/cardDefaultImg.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #44454F;
+  }
+}
+
+@media screen and (width: 1024px) {
+  .listItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 280px;
+    width: 300px;
+    padding: 20px;
+    background-image: url('../../../assets/img/cardDefaultImg.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #44454F;
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .textContainer h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  .actionContainer {
+    order: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .listItem {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+    width: 371px;
+    padding: 20px;
+    background-image: url('../../../assets/img/cardDefaultImg.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #44454F;
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .textContainer h3 {
+    margin: 0;
+    font-weight: normal;
+  }
+
+  .textContainer p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    text-wrap: balance;
+    font-size: 16px;
+  }
+
+  .actionContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .actions {
+    display: flex;
+    gap: 16px;
+  }
+}

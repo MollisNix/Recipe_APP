@@ -1,0 +1,29 @@
+.backGroundActive {
+  fill: #FFEECA;
+}
+
+.backGroundNormal {
+  opacity: 20%;
+  fill: #44454F;
+}
+
+.iconColorActive {
+  fill: #FFCE60;
+}
+
+.iconColorNormal {
+  fill: #FFFF;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: none;
+  outline: none;
+  cursor: pointer;
+}
